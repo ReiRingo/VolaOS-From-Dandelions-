@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111111; /* Dark outer border like a monitor bezel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+#desktop-wrapper {
+    width: 100vw;
+    height: 75vw;
+    max-height: 100vh;
+    max-width: 133.33vh;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+#desktop {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    
+    background-color: #008080;
+    background-image: url('assets/wallpaper.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.window {
+    max-width: 450px;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    margin: 0 !important;
+    z-index: 10;
+}
+
+.selection-box {
+    position: absolute;
+    border: 1px solid rgba(0, 120, 215, 0.8);
+    background-color: rgba(0, 120, 215, 0.3);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.desktop-icon {
+    position: absolute;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+}
+
+.desktop-icon .icon-img {
+    font-size: 32px;
+}
+
+.desktop-icon .icon-label {
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 4px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.desktop-icon.selected {
+    background-color: rgba(0, 120, 215, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.window.hidden {
+    display: none !important;
+}
+
+.window.minimized {
+    display: none !important;
+}
+
+.title-bar-controls button[aria-label="Close"]:hover {
+    background-color: #ff2f40 !important;
+    box-shadow: 0px 4px 10px #e05f30;
+    cursor: pointer;
+}
+
+.title-bar-controls button[aria-label="Minimize"]:hover {
+    background-color: #1596ff !important;
+    box-shadow: 0px 4px 10px #4b9fff;
+    cursor: pointer;
+}
+
+.title-bar-controls button[aria-label="Maximize"] {
+    opacity: 0.20 !important;
+    cursor: not-allowed;
+}
+
+/* The thing is ughhh */

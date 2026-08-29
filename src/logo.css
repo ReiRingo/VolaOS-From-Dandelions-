@@ -1,0 +1,47 @@
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease-out;
+}
+
+.logo-container h2 {
+    font-size: 2.8cqw;
+    font-weight: 300;
+    letter-spacing: 0.2cqw;
+    margin: 0;
+    text-shadow: 0 0 1.2cqw rgba(255, 255, 255, 0.6);
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1.1cqw;
+    margin-top: 0.4cqw;
+}
+
+.progress-bar-container {
+    width: 18cqw;
+    height: 1cqw;
+    border: 0.1cqw solid #444;
+    border-radius: 0.3cqw;
+    margin-top: 4cqw;
+    overflow: hidden;
+    background: #111;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #0055ff, #00d4ff);
+    box-shadow: 0 0 8px #00d4ff;
+    transition: width 0.1s linear;
+}

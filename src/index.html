@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dandelions Settings</title>
+    <link rel="stylesheet" href="7.css">
+    <style>
+        .window {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .field-row {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        select {
+            min-width: 180px;
+        }
+
+        .status-bar {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+
+        .window {
+            max-width: 450px;
+            position: absolute;
+            margin: 0;
+        }
+
+        .title-bar {
+            cursor: move;
+            user-select: none;
+        }
+    </style>
+    <link rel="stylesheet" href="logo.css">
+    <link rel="stylesheet" href="desktop-style.css">
+</head>
+
+<body>
+    <div id="desktop-wrapper">
+        <div id="desktop">
+            <div class="desktop-icon" data-window="dandelions-window" style="top: 3%; left: 2%;">
+                <div class="icon-img">📁</div>
+                <div class="icon-label">Language Settings</div>
+            </div>
+
+            <div class="desktop-icon" data-window="dandelions-emails" style="top: 15%; left: 2%;">
+                <div class="icon-img">📁</div>
+                <div class="icon-label">Emails</div>
+            </div>
+
+            <div id="boot-screen">
+                <div class="logo-container">
+                    <div class="glow"></div>
+                    <h2>VolaOS</h2>
+                    <p class="subtitle">Version 1.2 (Build 7602)</p>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="window" id="dandelions-window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Dandelions Language</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" class="btn-minimize"></button>
+                        <button aria-label="Maximize" class="btn-maximize"></button>
+                        <button aria-label="Close" class="btn-close"></button>
+                    </div>
+                </div>
+
+                <div class="window-body">
+                    <fieldset>
+                        <legend>Language Preferences</legend>
+
+                        <div class="field-row">
+                            <label for="lang-select">Display Language:</label>
+                            <select id="lang-select">
+                                <option value="">Loading languages...</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <section class="field-row" style="justify-content: flex-end; margin-top: 15px; margin-right: 15px;">
+                        <button id="btn-save">Save Settings</button>
+                    </section>
+
+                    <div class="status-bar">
+                        <p class="status-bar-field" id="status">Ready</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window" id="dandelions-emails">
+                <div class="title-bar">
+                    <div class="title-bar-text">Emails</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize" class="btn-minimize"></button>
+                        <button aria-label="Maximize" class="btn-maximize"></button>
+                        <button aria-label="Close" class="btn-close"></button>
+                    </div>
+                </div>
+
+                <!-- TODO: Read emails from jsons -->
+                <div class="window-body">
+                    <section class="field-row" style="justify-content: flex-end; margin-top: 15px; margin-right: 15px;">
+                        <button id="btn-save">Save Settings</button>
+                    </section>
+
+                    <div class="status-bar">
+                        <p class="status-bar-field" id="status">Ready</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
