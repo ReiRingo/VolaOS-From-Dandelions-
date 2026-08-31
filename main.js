@@ -1,14 +1,18 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, Menu, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs-extra');
 
 const settingsPath = path.join(process.env.LOCALAPPDATA, 'Dandelions', 'settings.json');
 
+Menu.setApplicationMenu(null);
+
 function createWindow() {
     const win = new BrowserWindow
     ({
-        width: 600 + 100,
-        height: 450 + 100,
+        width: 600 + 200,
+        height: 450 + 200,
+        maximizable: false,
+        resizable: false,
         transparent: false,
         frame: true,
         webPreferences:
